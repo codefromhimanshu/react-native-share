@@ -13,7 +13,7 @@ public class WhatsAppBusinessShare extends SingleShareIntent {
     private static final String PACKAGE = "com.whatsapp.w4b";
     private static final String PLAY_STORE_LINK = "market://details?id=com.whatsapp.w4b";
 
-    public WhatsAppShare(ReactApplicationContext reactContext) {
+    public WhatsAppBusinessShare(ReactApplicationContext reactContext) {
         super(reactContext);
     }
     @Override
