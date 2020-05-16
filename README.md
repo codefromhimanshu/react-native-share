@@ -397,6 +397,7 @@ Share.shareSingle(shareOptions);
 | **SNAPCHAT** | yes   | no | no |
 | **MESSENGER** | yes   | no | no |
 | **LINKEDIN** | yes   | no | no |
+| **WHATSAPP_BUSINESS** | yes   | no | no |
 
 #### How it looks:
 
