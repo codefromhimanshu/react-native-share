@@ -38,16 +38,15 @@
         successCallback(@[]);
     } else {
         // Cannot open instagram
-        NSString *stringURL = @"https://itunes.apple.com/app/instagram/id389801252";
+        NSString *stringURL = @"http://itunes.apple.com/app/instagram/id389801252";
         NSURL *url = [NSURL URLWithString:stringURL];
-        
-        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {}];
+        [[UIApplication sharedApplication] openURL:url];
         
         NSString *errorMessage = @"Not installed";
         NSDictionary *userInfo = @{NSLocalizedFailureReasonErrorKey: NSLocalizedString(errorMessage, nil)};
         NSError *error = [NSError errorWithDomain:@"com.rnshare" code:1 userInfo:userInfo];
         
-        NSLog(@"%@", errorMessage);
+        NSLog(errorMessage);
         failureCallback(error);
     } 
 }
@@ -99,9 +98,7 @@
             NSURL *instagramURL = [NSURL URLWithString:[NSString stringWithFormat:@"instagram://library?LocalIdentifier=\%@", [placeholder localIdentifier]]];
             
             if ([[UIApplication sharedApplication] canOpenURL:instagramURL]) {
-                if (@available(iOS 10.0, *)) {
-                    [[UIApplication sharedApplication] openURL:instagramURL options:@{} completionHandler:NULL];
-                }
+                [[UIApplication sharedApplication] openURL:instagramURL options:@{} completionHandler:NULL];
                 if (successCallback != NULL) {
                     successCallback(@[]);
                 }

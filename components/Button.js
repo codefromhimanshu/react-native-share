@@ -2,7 +2,6 @@
 
 import * as React from 'react';
 import { StyleSheet, Text, TouchableOpacity, Image } from 'react-native';
-import type { ImageSource } from 'react-native/Libraries/Image/ImageSource';
 
 const styles = StyleSheet.create({
   buttonText: {
@@ -29,7 +28,7 @@ const styles = StyleSheet.create({
 type Props = {
   buttonStyle: Object,
   onPress: () => void,
-  iconSrc: ImageSource,
+  iconSrc: string,
   textStyle: Object,
   children: React.Node,
 };

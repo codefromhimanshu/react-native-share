@@ -22,16 +22,12 @@ DerivedData
 *.xcuserstate
 project.xcworkspace
 
-# Android/IntelliJ
+# Android/IJ
 #
-build/
+*.iml
 .idea
 .gradle
 local.properties
-*.iml
-android/gradle/
-android/gradlew
-android/gradlew.bat
 
 # Visual Studio
 *.VC.db
@@ -61,3 +57,11 @@ coverage
 
 # node-waf configuration
 .lock-wscript
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+node_modules
+build/

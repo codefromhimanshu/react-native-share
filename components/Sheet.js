@@ -24,7 +24,6 @@ export default class extends React.Component<Props, State> {
     return Animated.timing(this.state.bottom, {
       toValue: newProps.visible ? 0 : DEFAULT_BOTTOM,
       duration: DEFAULT_ANIMATE_TIME,
-      useNativeDriver: false,
     }).start();
   }
 
